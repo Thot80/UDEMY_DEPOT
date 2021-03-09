@@ -1,0 +1,25 @@
+{# Page de Réinitialisation de mot de passe // Gérée par resetPasswordController #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié - Village Green{% endblock %}
+
+{% block content %}
+    <div class="block-small">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <form method="post">
+            <h1 class="h3 mb-3 font-weight-normal">Réinitialiser mon mot de passe</h1>
+            <label for="inputEmail">Email</label>
+            <input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
+
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">
+                Valider
+            </button>
+            <hr>
+            <p class="text-center">Ou souhaitez-vous <a href="{{ path('register') }}">créer un compte </a>?</p>
+        </form>
+    </div>
+{% endblock %}

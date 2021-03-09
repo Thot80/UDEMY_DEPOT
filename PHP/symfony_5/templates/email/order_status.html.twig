@@ -1,0 +1,32 @@
+<h1>Bonjour {{ recipientFullName }} </h1>
+{% if orderStatus == 0 %}
+    <h2>Commande interrompue</h2>
+    <p>
+        Une erreur s'est produite lors de votre paiement en ligne, nous n'avons pas pu finaliser votre commande n°<strong>{{ orderReference }}</strong>
+    </p>
+    <p>Rendez-vous sur <a href="#">votre commande</a> pour essayer à nouveau</p>
+{% elseif orderStatus == 1 %}
+    <h2>Félicitation pour votre commande !</h2>
+    <p>
+        Nous sommes heureux de vous confirmer votre commande n°<strong>{{ orderReference }}</strong> d'un montant de <strong>{{ (orderPrice/100)|number_format(2,',', '.') }}€</strong>
+    </p>
+    <p>Rendez-vous sur <a href="#">votre compte</a> pour suivre son avancement en temps réel !</p>
+{% elseif orderStatus == 2 %}
+    <h2>Votre commande est en cours de préparation !</h2>
+    <p>
+        Nous sommes heureux de vous informer que votre commande n°<strong>{{ orderReference }}</strong> d'un montant de <strong>{{ (orderPrice/100)|number_format(2,',', '.') }}€</strong>
+        est en cours de préparation et vous sera très prochainement expédiée.
+    </p>
+    <p>Rendez-vous sur <a href="#">votre compte</a> pour suivre son avancement en temps réel !</p>
+{% elseif orderStatus == 3 %}
+    <h2>Votre commande est en cours de livraison !</h2>
+    <p>
+        Nous sommes heureux de vous informer que votre commande n°<strong>{{ orderReference }}</strong> d'un montant de <strong>{{ (orderPrice/100)|number_format(2,',', '.') }}€</strong>
+        est en cours de livraison.
+    </p>
+    <p>Rendez-vous sur le site du  <a href="#">transporteur</a> pour suivre son avancement en temps réel !</p>
+{% endif %}
+<p>
+    Cordialement,
+    L'équipe de VillageGreen
+</p>

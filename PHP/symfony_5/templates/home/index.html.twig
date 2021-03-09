@@ -1,0 +1,56 @@
+{# Page d'accueil // Gérée par HomeController #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Village Green{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+{% block content %}
+    <h3>Nos meilleures ventes</h3>
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        {% for product in bestProducts %}
+            <div class="col-md-3">
+                <div class="product-item text-center">
+                    <a href="{{ path('product', { 'slug' : product.slug } ) }}"><img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
+                    <h4>{{  product.name }}</h4>
+                    <span class="product-subtitle">{{ product.subtitle }}</span>
+                    <span class="product-price">{{ (product.price / 100)|number_format(2) }} €</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Des amplis de qualités. <span class="text-muted">Il y en a pour tous les gouts !</span></h2>
+            <p class="lead">Peavey, Fender, Marshall, Epiphone, Line6, nos experts passionnés de musique ont séléctionné pour vous les meilleurs
+                amplis du marché alors n'attendez plus !</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/ampli.jpg') }}" alt="Un Mur de son pour à portée de main" class="img-fluid">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Un live de prévu ? <span class="text-muted">Votre stack est à revoir ?</span></h2>
+            <p class="lead">Chez VillageGreen, nos conseillers techniques sont près à vous répondre à n'importe quel moment pour étudier avec vous vos nouveaux besoins en matière de sonorisation,
+            partez en tournée serains !</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="{{ asset('assets/img/concert.jpg') }}" alt="Un Mur de son pour à portée de main" class="img-fluid">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+{% endblock %}

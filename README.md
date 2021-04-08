@@ -13,4 +13,4 @@ PHP :
 ************************************************************************************************************************************************************************
 JAVA : 
 
-- Cours Devenez développeut java de Jean-Philippe HERET, https://www.udemy.com/share/101z6YAEcYdFlVR3QH/, Certificat Obtenu
+- Cours Devenez développeur java de Jean-Philippe HERET, https://www.udemy.com/share/101z6YAEcYdFlVR3QH/, Certificat Obtenu

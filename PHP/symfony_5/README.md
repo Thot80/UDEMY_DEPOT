@@ -254,7 +254,7 @@ Les modifs dans les Repository :
 TODO
 
 - Améliorer / Harmoniser les rendus graphiques en général
-- Passer en dev et héberger le site
+- Passer en prod et héberger le site
 - Allimenter la bdd
 - Améliorer la sécurité des formulaires avec des regex
 - Les liens du carousel pointent tous sur la même page,
@@ -262,4 +262,5 @@ TODO
   
 - Ajouter une entitée marque et modifier le filtre pour faire des recherches
   par marques
+- Créer ou se brancher à une api qui irait siffoner les catalogues des grandes marques pour alimenter la bdd
   

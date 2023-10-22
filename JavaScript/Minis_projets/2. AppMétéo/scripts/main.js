@@ -1,6 +1,6 @@
 import jourSemaineEnOrdre from './Utilitaire/gestionTemps.js';
 
-const APIKEY = "7b3287fb52e0c0053fda3683da8e1d56";
+const APIKEY = "";
 let resultatsAPI;
 // Sélection de nos classes HTML pour y afficher nos données API
 const temps = document.querySelector('.temps');

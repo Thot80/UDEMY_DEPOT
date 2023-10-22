@@ -5,7 +5,7 @@ Création d'un site de e-commerce, toujours en dev pour le moment
 
 *****************************************************************************
 
-Pour réqupérer le projet :
+Pour récupérer le projet :
 
  - git clone
  - La bdd se trouve dans public/bdd, pensez à l'importer
@@ -16,7 +16,7 @@ Pour réqupérer le projet :
 
 - EasyAdmin 3 : composer require easycorp/easyadmin-bundle
 - Stripe : composer require stripe/stripe-php
-- Il faut un compe stripe pour tester le cannal de paiement
+- Il faut un compe stripe pour tester le canal de paiement
 *****************************************************************************
 
 MailHog est un outils permettant de simuler un serveur SMTP pour la gestion et le test
@@ -254,7 +254,7 @@ Les modifs dans les Repository :
 TODO
 
 - Améliorer / Harmoniser les rendus graphiques en général
-- Passer en dev et héberger le site
+- Passer en prod et héberger le site
 - Allimenter la bdd
 - Améliorer la sécurité des formulaires avec des regex
 - Les liens du carousel pointent tous sur la même page,
@@ -262,4 +262,5 @@ TODO
   
 - Ajouter une entitée marque et modifier le filtre pour faire des recherches
   par marques
+- Créer ou se brancher à une api qui irait siffoner les catalogues des grandes marques pour alimenter la bdd
   
